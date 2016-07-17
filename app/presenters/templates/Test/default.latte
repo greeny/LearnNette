@@ -1,0 +1,14 @@
+{block content}
+
+{foreach $questions as $question}
+	<h2>{$question->title}</h2>
+	<ol>
+		<li>{$question->answer1}</li>
+		<li>{$question->answer2}</li>
+		<li>{$question->answer3}</li>
+		<li>{$question->answer4}</li>
+		<li>{$question->answer5}</li>
+	</ol>
+{/foreach}
+
+{control testForm}

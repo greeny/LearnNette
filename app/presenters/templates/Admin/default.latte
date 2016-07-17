@@ -1,0 +1,30 @@
+{block content}
+
+<table>
+	<thead>
+		<tr>
+			<th>ID</th>
+			<th>Name</th>
+			<th>Sex</th>
+			<th>Actions</th>
+		</tr>
+	</thead>
+	<tbody>
+		<tr n:foreach="$responses as $response">
+			<td>{$response->id}</td>
+			<td>{$response->name}</td>
+			<td>
+				{if $response->sex === 'm'}
+					Male
+				{elseif $response->sex === 'f'}
+					Female
+				{else}
+					Undefined
+				{/if}
+			</td>
+			<td>
+				<a n:href="Admin:detail $response->id">Detail</a>
+			</td>
+		</tr>
+	</tbody>
+</table>

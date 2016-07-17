@@ -1,0 +1,18 @@
+{block content}
+
+<a n:href="Admin:default">Back to list</a><br><br>
+
+Name: {$response->name}<br>
+Sex:
+{if $response->sex === 'm'}
+	Male
+{elseif $response->sex === 'f'}
+	Female
+{else}
+	Undefined
+{/if}<br>
+
+{foreach $response->related('answer') as $answer}
+	{$answer->question->title} - {$answer->question['answer' . $answer->answer]}
+	{sep}/{/sep}
+{/foreach}
