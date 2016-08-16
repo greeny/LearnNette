@@ -22,6 +22,16 @@
 		}
 	</style>
 
+	{if $user->isLoggedIn()}
+		Logged in as ...
+		<a n:href="logout!">Logout</a>
+	{else}
+		Unlogged
+		<a n:href="Admin:default">Login</a>
+	{/if}
+
+	<hr>
+
 	<div n:foreach="$flashes as $flash" n:class="flash, $flash->type">
 		{$flash->message}
 	</div>

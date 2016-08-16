@@ -13,3 +13,6 @@ session:
 
 services:
 	router: App\RouterFactory::createRouter
+
+	- App\Security\Authenticator
+	- App\Security\Authorizator

@@ -1,6 +1,6 @@
 {block content}
 
-<a n:href="Admin:default">Back to list</a><br><br>
+<a n:if="$user->isAllowed('result', 'list')" n:href="Admin:list">Back to list</a><br><br>
 
 Name: {$response->name}<br>
 Sex:

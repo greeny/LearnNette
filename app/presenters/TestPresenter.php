@@ -10,7 +10,7 @@ use Nette\Application\UI\Presenter;
 use Nette\Database\Context;
 
 
-class TestPresenter extends Presenter
+class TestPresenter extends BasePresenter
 {
 
 	/** @var Context */
